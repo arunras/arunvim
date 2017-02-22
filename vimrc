@@ -1,10 +1,19 @@
-
-
-filetype plugin on
-"===VUNDLE========================================================={{
+"===MY SETTING===|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|={{
 syntax on
 set number
 set nocompatible
+filetype plugin on
+
+"==>set indentation to 4 spaces==>
+set tabstop     =4 " Width of tab character
+set softtabstop =4 " Fine tunes the amount of white space to be added
+set shiftwidth  =4 " Determines the amount of whitespace to add in normal mode
+set expandtab      " When on uses space instead of tabs
+
+
+"===endMY SETTING===|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=}}
+
+"===VUNDLE========================================================={{
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -95,3 +104,6 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 "===}}
+
+
+
