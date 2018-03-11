@@ -1,2 +1,2 @@
 # arunvim
-My VIM Configuration and Plugings
+My VIM Configuration and Plugins
