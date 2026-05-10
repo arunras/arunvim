@@ -1,0 +1,45 @@
+"--------------------------------------------------------------------------------
+"===ARUN VIM===|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=|=
+"--------------------------------------------------------------------------------
+"--- BASIC SETTINGS ---
+syntax on               " Enable syntax highlighting
+set number              " Show absolute line number
+set relativenumber      " Show relative line number for easy jumping
+set nocompatible        " Use Vim features, not old vi
+set ruler               " show line and column number
+set showcmd             " show (partial) command in status line
+"set cursorline
+filetype plugin on
+ 
+"--- INDENTATION ---
+set tabstop     =2      " A tab counts as 2 spaces
+set softtabstop =2      " Unified tab/backspace behavior
+set shiftwidth  =2      " Indents of 2 spaces
+set autoindent          " Copy indent from current line when starting a new line
+set smartindent         " Intelligent C-style indenting
+set expandtab           " Use spaces instead of tabs
+set backspace   =indent,eol,start
+
+"--- SEARCHING ---
+set hlsearch            " Highlight search results
+set incsearch           " Show search matches as you type
+set ignorecase          " Ignore case in search...
+set smartcase           " ...unless there's a capital letter
+
+"--- PLUGINS (Requires vim-plug) ---
+
+"--- JAVA SPECIFIC SETTING ---
+autocmd FileType java setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+
+" Press F6 to compile and run a single Java file
+autocmd filetype java nnoremap <F6> :w <bar> !javac % && java %:r <CR>
+
+" Press F4 to generate a basic Java Class template in a new file
+autocmd BufNewFile *.java 0r !echo "public class %:r {\n    public static void main(String[] args) {\n        \n    }\n}"
+
+"--- C++ SPECIFIC SETTING ---
+" Press F5 to compile and run the current C++ file
+autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 % -o %:r && ./%:r <CR>
+
+" Press F12 to jump to a definition (requires ctags)
+nnoremap <F12> <C-]>

@@ -1,8 +1,11 @@
-echo "Hello, Arun!"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+echo "Becoming a Self Driving Car Engineer, Arun!"
 export PS1="\[\033[1;34m\]>\[\033[0m\]>\[\033[\033[1;35m\]>\[\033[0m\] "
 alias c="clear"
 alias clr="clear"
-alias ll="ls -at"
+alias l="ls"
+alias la="ls -alt"
+alias ll="ls -1"
 alias pd="pwd"
 alias a="./a"
 alias ..="cd .."
@@ -14,8 +17,14 @@ alias ......="cd ../../../../../"
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+#==Run Python====
+alias py=python3
+alias python=python3
+alias pip=pip3
 #==Run C/C++=====
-alias run="gcc -o a main.c -I/usr/X11R6/include -L/usr/X11R6/lib -lX11"
+alias g1=g++
+alias g="g++ -std=c++11 -o a"
+#alias run="gcc -o a main.c -I/usr/X11R6/include -L/usr/X11R6/lib -lX11"
 #==Websites======
 alias gmail="open https://gmail.com"
 alias google="open https://google.com"
@@ -26,3 +35,5 @@ alias bitbucket="open https://bitbucket.org/ccnycs/xrobit/src"
 alias ek="open http://english-khmer.com"
 alias cunyfirst="open https://home.cunyfirst.cuny.edu/oam/Portal_Login1.html"
 alias bb="open https://cunyportal.cuny.edu/cpr/authenticate/portal_login.jsp"
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
