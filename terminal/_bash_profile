@@ -1,19 +1,33 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 echo "Becoming a Self Driving Car Engineer, Arun!"
 export PS1="\[\033[1;34m\]>\[\033[0m\]>\[\033[\033[1;35m\]>\[\033[0m\] "
+
 alias c="clear"
 alias clr="clear"
 alias l="ls"
-alias la="ls -alt"
+alias la="ls -alF"
 alias ll="ls -1"
 alias pd="pwd"
 alias a="./a"
+
+#--- FILE ---
+alias rm="rm -i"
+alias cp="cp -i"
+
+#--- DIRECTORY ---
 alias ..="cd .."
 alias ...="cd ../../"
 alias ....="cd ../../../"
 alias .....="cd ../../../../"
 alias ......="cd ../../../../../"
 
+alias arun="cd ~/ArunX"
+alias sys="cd ~/ArunX/SystemX"
+
+#--- GIT ---
+alias gs="git status"
+
+#--- COLOR ---
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
